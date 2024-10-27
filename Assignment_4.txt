@@ -1,0 +1,55 @@
+#ASSIGNMENT 4
+
+'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN AN ARRAY.
+WRITE FUNCTION FOR SORTING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
+1] BUBBLE SORT.
+2] SELECTION SORT.
+3] INSERTION SORT.
+ALSO DISPLAY THE TOP 5 PERCENTAGE '''
+
+
+# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+percentage=[]
+n=int(input("Enter total no. of students:"))
+for i in range(n):
+    percentage.append(float(input("Enter percentage:")))
+print("Previous list:",percentage)
+
+#BUBBLE SORT
+
+for i in range(0,len(percentage)):
+    for j in range(i+1,len(percentage)):
+        if(percentage[i]>percentage[j]):
+            temp=percentage[j]
+            percentage[j]=percentage[i]
+            percentage[i]=temp
+print("Bubble Sorted list:",percentage)
+print("Top 5 students:",percentage[len(percentage)-1],",",percentage[len(percentage)-2],",",percentage[len(percentage)-3],",",percentage[len(percentage)-4],",",percentage[len(percentage)-5])
+
+
+#SELECTION SORT
+
+for i in range(0,len(percentage)):
+    for j in range(i+1,len(percentage)):
+        if(percentage[i]>percentage[j]):
+            percentage[i].insert(percentage[j])
+print("Selection sorted list:",percentage)
+
+
+#INSERTION SORT
+
+def insertionsort(array):
+    for i in range(1,len(array)):
+        temp=array[i]
+        j=i-1
+        while j>=0 and temp<array[j]:
+            array[j+1]=array[j]
+            j-=1
+        array[j+1]=temp
+insertionsort(percentage)
+print("Sorted list by insertion sort:",percentage)
+
+print("END OF PROGRAM ->->->->->->->->->->->->->->->->")
+
+#END OF PROGRAM
