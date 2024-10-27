@@ -1,0 +1,102 @@
+# ASSIGNMENT 1 
+
+'''Q.1] IN A SE COMPUTER ENGINEERING CLASS,GROUP A STUDENTS PLAY CRICKET,GROUP B STUDENTS PLAY BADMENTON AND GROUP C STUDENTS PLAY FOOTBALL. 
+WRITE A PYTHON PROGRAM USING FUNCTIONS TO COMPUTE THE FOLLOWING: 
+1] LIST OF STUDENTS WHO PLAY BOTH CRICKET AND BADMENTON. 
+2] LIST OF STUDENTS WHO PLAY CRICKET AND BADMENTON OR BOTH THE GAMES. 
+3] LIST OF STUDENTS WHO PLAY EITHER CRICKET OR BADMENTON BUT NOT BOTH. 
+4] NUMBER OF STUDENTS WHO PLAY NEITHER CRICKET NOT BADMENTON. 
+5] NUMBER OF STUDENTS WHO PLAY CRICKET AND FOOTBALL BUT NOT BADMENTON.''' 
+
+
+
+# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+cricket=[] 
+badmenton=[] 
+football=[] 
+
+n=int(input("Enter the no. of students playing cricket:")) 
+for i in range(n): 
+    cricket.append(input("Enter name:")) 
+
+n=int(input("Enter the no. of students playing badmenton:")) 
+for j in range(n): 
+    badmenton.append(input("Enter name:")) 
+
+n=int(input("Enter the no. of students playing football:")) 
+for k in range(n): 
+    football.append(input("Enter name:")) 
+
+print("Students playing cricket:",cricket) 
+print("Students playing badmenton:",badmenton) 
+print("Students playing football:",football) 
+
+#CRICKET AND BADMENTON 
+
+A=[] 
+def intersection(a,b,c): 
+    for i in a: 
+        for j in b: 
+            if(i==j): 
+                c.append(i) 
+    return c 
+print("Students playing cricket and badmenton are:",intersection(cricket,badmenton,A)) 
+
+#CRICKET AND BADMENTON OR BOTH 
+
+B=[] 
+def union(x,y,z): 
+    for i in x: 
+        if(i not in z): 
+            z.append(i) 
+    for j in y: 
+        if(j not in z): 
+            z.append(j) 
+    return z 
+print("Students playing cricket or badmenton or both the games are:",union(cricket,badmenton,B)) 
+
+
+#CRICKET OR BADMENTON BUT NOT BOTH 
+
+C=[] 
+def difference(l,m,n): 
+    for i in l: 
+        if(i not in m): 
+            n.append(i) 
+    for j in m: 
+        if(j not in l): 
+            n.append(j) 
+    return n 
+print("Students playing cricket or badmenton but not both the games are:",difference(cricket,badmenton,C)) 
+
+
+#NEITHER CRICKET NOR BADMENTON 
+
+D=[] 
+def null(s,t,u,v): 
+    for i in s: 
+        if(i not in t): 
+            v.append(i) 
+    for j in u: 
+        if(j not in u): 
+            v.append(j) 
+    return v 
+print("Students who play neither cricket not badmenton are :",null(football,cricket,badmenton,D)) 
+
+
+#CRICKET AND FOOTBALL BUT NOT BADMENTON 
+
+E=[] 
+def both(p,q,r,S): 
+    for i in p: 
+        if(i not in q): 
+            S.append(i) 
+    for j in r: 
+        if(j not in q): 
+            S.append(j) 
+    return S 
+print("Students who play cricket and football but not badmenton are:",both(cricket,badmenton,football,E)) 
+print("END OF THE PROGRAM ->->->->->->->->->->->->->->->->->->->->->->->->->->->->->") 
+
+#PROGRAM END 
