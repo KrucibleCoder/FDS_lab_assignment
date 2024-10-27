@@ -1,0 +1,63 @@
+#SEARCHING OPERATIONS
+
+'''Q.1] WRITE A PYTHON PROGRAM TO STORE ROLL NO. OF STUDENTS IN AN ARRAY WHO ATTENDED TRAINING PROGRAM IN A RANDOM ORDER.
+WRITE A FUNCTION FOR SEARCHING WHETHER A PARTICULAR STUDENT ATTENDED THE TRAINING PROGRAM OR NOT USING:
+1] LINEAR SEARCH.
+2] SENTINAL SEARCH.'''
+
+
+
+# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+rollno=[]
+n=int(input("Enter the total number of students:"))
+for i in range(n):
+    rollno.append(int(input("Enter roll no:")))
+print(rollno)
+
+
+#USING LINEAR SEARCH
+                  
+el=int(input("Enter the roll no. of the student to be checked:"))
+if(el in rollno):
+     print("Roll no.",el,"was present")
+else:
+     print("Roll no.",el,"was absent")
+
+#USING SENTINAL SEARCH
+
+def sentinal_search():
+    index=0
+    while True:
+        if(rollno[index]==el):
+            break
+        index=index+1
+    return print("Roll no",el," was present")
+sentinal_search()
+
+
+
+#USING BINARY SEARCH
+
+def binary_search(rollno,el):
+    first=0
+    last=len(rollno)-1
+    found=False
+    while first<=last and not found:
+        mid=(first+last)/2
+        if(rollno[mid]==el):
+            found=True
+        elif(el<rollno[mid]):
+            last=mid-1
+        else:
+            first=mid+1
+    return found
+Found=binary_search(rollno,el)
+if(Found):
+    print("Element found")
+else:
+    print("Element not found")
+
+print("END OF PROGRAM ->->->->->->->->->->->->->->->->->->")
+
+#END OF PROGRAM
