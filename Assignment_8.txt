@@ -1,0 +1,269 @@
+'''Q.1] SECOND YEAR COMPUTER ENGINEERING CLASS,SET A OF STUDENTS LIKE VANILLA ICE-CREAM AND SET B OF STUDENTS LIKE BUTTERSCOTCH ICE-CREAM.
+	WRITE A C++ PROGRAM TO STORE TWO SETS USING LINKED LIST. COMPUTE AND DISPLAY:
+	(A) SET OF STUDENTS WHO LIKE BOTH VANILLA AND BUTTERSCOTCH.
+	(B) SET OF STUDENTS WHO LIKE EITHER VANILLA OR BUTTERSCOTCH.
+	(C) SET OF STUDENTS WHO LIKE NEITHER VANILLA NOT BUTTERSCOTCH.'''
+
+
+# ANSWER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+#include<iostream>
+using namespace std;
+
+struct node {
+    int roll;
+    struct node *next;
+};
+
+class info {
+    node *head1 = NULL, *head2 = NULL, *allStudentsHead = NULL;
+   
+public:
+    node *create(int roll);
+    void insertAllStudents();
+    void insertVanilla();
+    void insertButterscotch();
+    void displayEither();
+    void displayOnlyVanilla();
+    void displayOnlyButterscotch();
+    void displayBoth();
+    void displayAllStudents();
+};
+
+node *info::create(int roll) {
+    node *p = new node;
+    p->roll = roll;
+    p->next = NULL;
+    return p;
+}
+
+void info::insertAllStudents() {
+    int n;
+    cout << "Enter total number of students: ";
+    cin >> n;
+   
+    cout << "Enter roll numbers of all students:\n";
+    for (int i = 0; i < n; i++) {
+        int roll;
+        cout << "Enter student roll no: ";
+        cin >> roll;
+        node *newNode = create(roll);
+       
+        if (allStudentsHead == NULL) {
+            allStudentsHead = newNode;
+        } else {
+            node *temp = allStudentsHead;
+            while (temp->next != NULL) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+   
+    displayAllStudents();
+}
+
+void info::displayAllStudents() {
+    cout << "Students' roll numbers: ";
+    node *temp = allStudentsHead;
+    while (temp != NULL) {
+        cout << temp->roll << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+
+void info::insertVanilla() {
+    int n;
+    cout << "Enter number of students who like vanilla: ";
+    cin >> n;
+   
+    cout << "Enter roll numbers of students who like vanilla (terminate with -1):\n";
+    for (int i = 0; i < n; i++) {
+        int roll;
+        cout << "Enter student roll no: ";
+        cin >> roll;
+
+        if (roll == -1) break; // terminate input
+        node *newNode = create(roll);
+
+        if (head1 == NULL) {
+            head1 = newNode;
+        } else {
+            node *temp = head1;
+            while (temp->next != NULL) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+}
+
+void info::insertButterscotch() {
+    int n;
+    cout << "Enter number of students who like butterscotch: ";
+    cin >> n;
+
+    cout << "Enter roll numbers of students who like butterscotch (terminate with -1):\n";
+    for (int i = 0; i < n; i++) {
+        int roll;
+        cout << "Enter student roll no: ";
+        cin >> roll;
+
+        if (roll == -1) break; // terminate input
+        node *newNode = create(roll);
+
+        if (head2 == NULL) {
+            head2 = newNode;
+        } else {
+            node *temp = head2;
+            while (temp->next != NULL) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+}
+
+void info::displayEither() {
+    cout << "Students who like either vanilla or butterscotch or both:\n";
+   
+    // Create a temporary list to collect unique students
+    node *temp1 = head1;
+    node *temp2 = head2;
+
+    while (temp1 != NULL) {
+        cout << temp1->roll << " ";
+        temp1 = temp1->next;
+    }
+
+    while (temp2 != NULL) {
+        // Avoid duplicates
+        node *check = head1;
+        bool found = false;
+        while (check != NULL) {
+            if (check->roll == temp2->roll) {
+                found = true;
+                break;
+            }
+            check = check->next;
+        }
+        if (!found) {
+            cout << temp2->roll << " ";
+        }
+        temp2 = temp2->next;
+    }
+    cout << endl;
+}
+
+void info::displayOnlyVanilla() {
+    cout << "Students who like only vanilla:\n";
+    node *temp1 = head1;
+    node *temp2 = head2;
+    while (temp1 != NULL) {
+        bool found = false;
+        node *check = temp2;
+        while (check != NULL) {
+            if (temp1->roll == check->roll) {
+                found = true;
+                break;
+            }
+            check = check->next;
+        }
+        if (!found) {
+            cout << temp1->roll << " ";
+        }
+        temp1 = temp1->next;
+    }
+    cout << endl;
+}
+
+void info::displayOnlyButterscotch() {
+    cout << "Students who like only butterscotch:\n";
+    node *temp2 = head2;
+    node *temp1 = head1;
+    while (temp2 != NULL) {
+        bool found = false;
+        node *check = temp1;
+        while (check != NULL) {
+            if (temp2->roll == check->roll) {
+                found = true;
+                break;
+            }
+            check = check->next;
+        }
+        if (!found) {
+            cout << temp2->roll << " ";
+        }
+        temp2 = temp2->next;
+    }
+    cout << endl;
+}
+
+void info::displayBoth() {
+    cout << "Students who like both vanilla and butterscotch:\n";
+    node *temp1 = head1;
+    node *temp2 = head2;
+    while (temp1 != NULL) {
+        node *check = temp2;
+        while (check != NULL) {
+            if (temp1->roll == check->roll) {
+                cout << temp1->roll << " ";
+            }
+            check = check->next;
+        }
+        temp1 = temp1->next;
+    }
+    cout << endl;
+}
+
+int main() {
+    info s;
+    int choice;
+
+    do {
+        cout << "\nChoose the option:\n";
+        cout << "1. Enter total number of students\n";
+        cout << "2. Enter numbers of students who like vanilla\n";
+        cout << "3. Enter numbers of students who like butterscotch\n";
+        cout << "4. Display students who like either vanilla or butterscotch\n";
+        cout << "5. Display students who like only vanilla\n";
+        cout << "6. Display students who like only butterscotch\n";
+        cout << "7. Display students who like both vanilla and butterscotch\n";
+        cout << "8. Exit\n";
+        cout << "Enter your choice: ";
+       
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                s.insertAllStudents();
+                break;
+            case 2:
+                s.insertVanilla();
+                break;
+            case 3:
+                s.insertButterscotch();
+                break;
+            case 4:
+                s.displayEither();
+                break;
+            case 5:
+                s.displayOnlyVanilla();
+                break;
+            case 6:
+                s.displayOnlyButterscotch();
+                break;
+            case 7:
+                s.displayBoth();
+                break;
+            case 8:
+                cout << "Exiting the program." << endl;
+                break;
+            default:
+                cout << "Unknown choice." << endl;
+        }
+    } while (choice != 8);
+
+    return 0;
+}
