@@ -1,0 +1,34 @@
+#Assignment 06
+
+'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN ARRAY. WRITE FUNCTION FOR SORTING ARRAY FOR STORING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
+1]QUICK SORT'''
+
+
+"PROGRAM >>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+
+percentage=[]
+n=int(input("Enter total no of students:"))
+for i in range(n):
+    percentage.append(float(input("enter percentage:")))
+
+def partition(percentage,low,high):
+    i=(low-1)
+    pivot=percentage[high]
+    for j in range(low,high):
+        if(percentage[j]<=pivot):
+            i=i+1
+            percentage[i],percentage[j]=percentage[j],percentage[i]
+    percentage[i+1],percentage[high]=percentage[high],percentage[i+1]
+    return i+1
+
+def quicksort(percentage,low,high):
+    if(low<high):
+        pi=partition(percentage,low,high)
+        quicksort(percentage,low,pi-1)
+        quicksort(percentage,pi+1,high)
+print("Original list:",percentage)
+quicksort(percentage,0,len(percentage)-1)
+print("Sorted list:",percentage)
+
+#END OF CODE
