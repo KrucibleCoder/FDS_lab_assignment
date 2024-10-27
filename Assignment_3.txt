@@ -1,0 +1,71 @@
+#ASSIGNMENT 3
+
+'''Q.1] WRITE A PYTHON PROGRAM FOR A DEPARTMENTAL LIBRARY WHICH HAS N NUMBER OF BOOKS.
+WRITE FUNCTIONS FOR THE FOLLOWING :
+1] DELETE THE DUPLICAE ENTRIES.
+2] COUNT THE NUMBER OF BOOKS WHICH COST MORE THAN 500.
+3] COPY BOOKS IN A NEW LIST WHICH HAS COST LESS THAN 500.
+4] DISPLAY THE BOOKS IN ASCENDING ORDER BASED ON THE COST OF BOOKS.'''
+
+
+
+# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+book=[]
+cost=[]
+n=int(input("Enter total no. of books in the library:"))
+for i in range(n):
+    print("Enter name of book",(i+1))
+    x=input("Name:")
+    print("Enter cost of book",(i+1))
+    y=int(input("Enter cost:"))
+    book.append(x)
+    cost.append(y)
+
+#DELETING DUPLICATE ENTRIES
+
+sorted_book=[]
+sorted_cost=[]
+for i in book:
+    if(i in book):
+        if(i not in sorted_book):
+            sorted_book.append(i)
+for j in cost:
+    if(j in cost):
+        if(j not in sorted_cost):
+            sorted_cost.append(j)
+print("Sorted list of books:",sorted_book)
+print("Sorted list of costs:",sorted_cost)
+
+
+#NUMBER OF BOOKS WITH PRICE MORE THAN 500
+
+n=0
+for i in sorted_cost:
+    if(i>=500):
+        n=n+1
+print("The number of books having cost more than 500 are:",n)
+
+#BOOKS WITH COST LESS THAN 500
+
+x=[]
+for i in range(0,len(sorted_cost)):
+    if(sorted_cost[i]<500):
+        x.append(sorted_book[i])
+        i=i+1
+print("Books with cost less than 500 are:",x)
+
+#ARRANGE IN ASCENDING ORDER
+
+
+for i in range(0,len(sorted_cost)):
+    for j in range(i+1,len(sorted_cost)):
+        if(sorted_cost[i]>sorted_cost[j]):
+            temp=sorted_book[j]
+            sorted_book[j]=sorted_book[i]
+            sorted_book[i]=temp
+print("books in ascending order:",sorted_book)
+
+print("END OF PROGRAM ->->->->->->->->->->->->->->_>->->->->->_>->->")
+
+#END OF PROGRAM
