@@ -1,0 +1,57 @@
+#Assignment 05
+
+'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN ARRAY. WRITE FUNCTION FOR SORTING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
+1] INSERTION SORT
+2] SHELL SORT AND DISPLAY TOP FIVE STUDENTS'''
+
+
+"PROGRAM >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+
+percentage=[]
+n=int(input("Enter total no. of students:"))
+for i in range(n):
+    percentage.append(float(input("Enter percentage:")))
+print("Previous list:",percentage)
+
+#INSERTION SORT
+
+def insertionsort(array):
+    for i in range(1,len(array)):
+        temp=array[i]
+        j=i-1
+        while j>=0 and temp<array[j]:
+            array[j+1]=array[j]
+            j-=1
+        array[j+1]=temp
+insertionsort(percentage)
+print("Sorted list by insertion sort:",percentage)
+
+
+#SHELL SORT PROGRAM
+
+
+size=len(percentage)
+
+def shellsort(array,n):
+    interval=n//2
+    while interval>0:
+        for i in range(interval,n):
+            temp=array[i]
+            j=i
+            while j>=interval and array[j-interval]>temp:
+                array[j]=array[j-interval]
+                j-=interval
+            array[j]=temp
+        interval//=2
+shellsort(percentage,size)
+print("sorted array:",percentage)
+
+
+#TOP 5 STUDENTS
+
+
+print("Top 5 students:",percentage[len(percentage)-1],",",percentage[len(percentage)-2],",",percentage[len(percentage)-3],",",percentage[len(percentage)-4],",",percentage[len(percentage)-5])
+
+
+#END OF CODE                         
