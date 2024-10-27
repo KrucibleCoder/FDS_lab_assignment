@@ -1,0 +1,70 @@
+#ASSIGNMENT 2
+
+'''Q.1] WRITE A PYTHON PROGRAM TO STORE MARKS STORED IN SUBJECT FDS BY N NUMBER OF STUDENTS IN THE CLASS.
+WRITE FUNCTIONS TO COMPUTE THE FOLLOWING :
+1] THE AVERAGE SCORE OF THE CLASS.
+2] THE HIGHEST SCORE AND THE LOWEST SCORE OF THE CLASS.
+3] COUNT OF STUDENTS WHO WERE ABSENT FOR THE TEST.
+4] DISPLAY THE MARKS WITH HIGHEST FREQUENCY.'''
+
+
+
+# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+marks=[]
+n=int(input("Enter the total number of students in the class:"))
+for i in range(n):
+    print("Enter marks for roll no",(i+1))
+    x=int(input("Enter marks:"))
+    marks.append(x)
+print("LIST OF MARKS OF STUDENTS :",marks)
+
+#AVERAGE
+
+sum=0
+for i in marks:
+    sum=sum+i
+avg=sum/n
+print("Average of the class is:",avg)
+
+#MIN TERM AND MAX TERM
+
+max=marks[0]
+for i in marks:
+    if(i>max):
+        max=i
+print("The highest score obtained is:",max)
+min=marks[0]
+for i in marks:
+    if(i<min):
+        min=i
+print("The lowest score obtained is:",min)
+
+#ABSENT STUDENTS
+
+absent=[]
+count=0
+for i in marks:
+    if(i==count):
+        absent.append(i)
+print("The number of absent students are:",len(absent))
+
+#HIGHEST FREQUENCY
+
+def maxfrequency(marks):
+    i=0
+    max=0
+    print("marks      |      frequency")
+    for j in marks:
+        if(marks.index(j)==i):
+            print(j,"    ======>>>    ",marks.count(j))
+            if(marks.count(j)>max):
+                max=marks.count(j)
+                mark=j
+        i=i+1
+    return (marks,max)
+maxfrequency(marks)
+print("END OF PROGRAM ->->->->->->->->->->->->->->->->->->->->->->->->")
+
+
+#END OF PROGRAM
