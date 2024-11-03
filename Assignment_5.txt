@@ -1,11 +1,13 @@
 #Assignment 05
 
-'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN ARRAY. WRITE FUNCTION FOR SORTING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
-1] INSERTION SORT
-2] SHELL SORT AND DISPLAY TOP FIVE STUDENTS'''
+'''
+Q.1] Write a python program to store first year percentage of students in array. Write function for sorting array of floating point numbers in ascending order using:
+1] Insertion sort
+2] Shell sort and display top five students
+'''
 
 
-"PROGRAM >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+# PROGRAM
 
 
 percentage=[]
@@ -54,4 +56,4 @@ print("sorted array:",percentage)
 print("Top 5 students:",percentage[len(percentage)-1],",",percentage[len(percentage)-2],",",percentage[len(percentage)-3],",",percentage[len(percentage)-4],",",percentage[len(percentage)-5])
 
 
-#END OF CODE                         
+# END PROGRAM                   
