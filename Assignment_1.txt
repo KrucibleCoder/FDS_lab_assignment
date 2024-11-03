@@ -1,16 +1,15 @@
-# Assignment 1 
+/*
+Q.1] In a SE computer engineering class, group A students play cricket, group B students play badmenton and group C students play football. 
+Write a python program using functions to compute the following: 
+1] List of students who play both cricket and badmenton. 
+2] List of students who play cricket and badmenton or both the games. 
+3] List of students who play either cricket or badmenton but not both. 
+4] Number of students who play neither cricket not badmenton. 
+5] Number of students who play cricket and football but not badmenton.
+*/
 
-'''Q.1] IN A SE COMPUTER ENGINEERING CLASS,GROUP A STUDENTS PLAY CRICKET,GROUP B STUDENTS PLAY BADMENTON AND GROUP C STUDENTS PLAY FOOTBALL. 
-WRITE A PYTHON PROGRAM USING FUNCTIONS TO COMPUTE THE FOLLOWING: 
-1] LIST OF STUDENTS WHO PLAY BOTH CRICKET AND BADMENTON. 
-2] LIST OF STUDENTS WHO PLAY CRICKET AND BADMENTON OR BOTH THE GAMES. 
-3] LIST OF STUDENTS WHO PLAY EITHER CRICKET OR BADMENTON BUT NOT BOTH. 
-4] NUMBER OF STUDENTS WHO PLAY NEITHER CRICKET NOT BADMENTON. 
-5] NUMBER OF STUDENTS WHO PLAY CRICKET AND FOOTBALL BUT NOT BADMENTON.''' 
 
-
-
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+// ANSWER :
 
 cricket=[] 
 badmenton=[] 
