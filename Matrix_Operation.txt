@@ -1,14 +1,16 @@
 #MATRIX PROBLEMS
 
-'''Q.1] WRITE A PYTHON PROGRAM TO COMPUTE THE FOLLOWING COMPUTATION OF MATRICES:
-1] ADDITION OF TWO MATRICES
-2] SUBTRACTION OF TWO MATRICES
-3] MULTIPLICATION OF TWO MATRICES
-4] TRANSPOSE OF TWO MATRICES'''
+'''
+q.1] Write a python program to compute the following computation of matrices:
+1] Addition of two matrices
+2] Subtraction of two matrices
+3] Multiplication of two matrices
+4] Transpose of two matrices
+'''
+
 
+# PROGRAM 
 
-
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 A=[[12,7,3],[4,5,6],[7,8,9]]
 B=[[5,8,1],[6,7,3],[4,5,9]]
@@ -62,5 +64,7 @@ for i in range(len(A)):
 for r in result:
     print(r)
 print("END OF PROGRAM ->->->->->->->->->->->->->->->->->->->")
+
+
       
-#END OF PROGRAM
+# END PROGRAM
