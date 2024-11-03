@@ -1,6 +1,6 @@
 /*
-Q.1] PIZZA PARIOR ACCEPTING MAXIMUM M ORDERS. ORDERS ARE SERVED IN FIRST COME FIRST SERVED BASIS. ORDER ONCE PLACED CANNOT BE CANCELLED.
-	WRITE A C++ PROGRAM TO SIMULATE  THE SYSTEM USING CIRCULAR QUEUE USING ARRAY.
+q.1] Pizza parior accepting maximum m orders. Orders are served in first come first served basis. Order once placed cannot be cancelled.
+	Write a C++ program to simulate  the system using circular queue using array.
 */
 
 
