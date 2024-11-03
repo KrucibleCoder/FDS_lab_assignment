@@ -1,10 +1,11 @@
 #Assignment 06
 
-'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN ARRAY. WRITE FUNCTION FOR SORTING ARRAY FOR STORING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
-1]QUICK SORT'''
+'''
+Q.1] Write a python program to store first year percentage of students in array. Write function for sorting array for storing array of floating point numbers in ascending order using quick sort.
+'''
 
 
-"PROGRAM >>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+# PROGRAM 
 
 
 percentage=[]
@@ -31,4 +32,4 @@ print("Original list:",percentage)
 quicksort(percentage,0,len(percentage)-1)
 print("Sorted list:",percentage)
 
-#END OF CODE
+# END PROGRAM
