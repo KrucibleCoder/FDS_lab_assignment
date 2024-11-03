@@ -1,15 +1,19 @@
 #Assignment 3
 
-'''Q.1] WRITE A PYTHON PROGRAM FOR A DEPARTMENTAL LIBRARY WHICH HAS N NUMBER OF BOOKS.
-WRITE FUNCTIONS FOR THE FOLLOWING :
-1] DELETE THE DUPLICAE ENTRIES.
-2] COUNT THE NUMBER OF BOOKS WHICH COST MORE THAN 500.
-3] COPY BOOKS IN A NEW LIST WHICH HAS COST LESS THAN 500.
-4] DISPLAY THE BOOKS IN ASCENDING ORDER BASED ON THE COST OF BOOKS.'''
+'''
+Q.1] Write a python program for a departmental library which has n number of books.
+Write functions for the following :
+1] Delete the duplicae entries.
+2] Count the number of books which cost more than 500.
+3] Copy books in a new list which has cost less than 500.
+4] Display the books in ascending order based on the cost of books.
+'''
 
 
 
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# PROGRAM 
+
+
 
 book=[]
 cost=[]
@@ -68,4 +72,4 @@ print("books in ascending order:",sorted_book)
 
 print("END OF PROGRAM ->->->->->->->->->->->->->->_>->->->->->_>->->")
 
-#END OF PROGRAM
+# END PROGRAM
