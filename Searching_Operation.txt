@@ -1,13 +1,16 @@
 #SEARCHING OPERATIONS
 
-'''Q.1] WRITE A PYTHON PROGRAM TO STORE ROLL NO. OF STUDENTS IN AN ARRAY WHO ATTENDED TRAINING PROGRAM IN A RANDOM ORDER.
-WRITE A FUNCTION FOR SEARCHING WHETHER A PARTICULAR STUDENT ATTENDED THE TRAINING PROGRAM OR NOT USING:
-1] LINEAR SEARCH.
-2] SENTINAL SEARCH.'''
+'''
+Q.1] Write a python program to store roll no. Of students in an array who attended training program in a random order.
+ Write a function for searching whether a particular student attended the training program or not using:
+1] Linear search.
+2] Sentinal search.
+'''
 
 
 
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# PROGRAM 
+
 
 rollno=[]
 n=int(input("Enter the total number of students:"))
@@ -60,4 +63,4 @@ else:
 
 print("END OF PROGRAM ->->->->->->->->->->->->->->->->->->")
 
-#END OF PROGRAM
+# END PROGRAM
