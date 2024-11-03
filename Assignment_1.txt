@@ -1,4 +1,4 @@
-/*
+'''
 Q.1] In a SE computer engineering class, group A students play cricket, group B students play badmenton and group C students play football. 
 Write a python program using functions to compute the following: 
 1] List of students who play both cricket and badmenton. 
@@ -6,10 +6,10 @@ Write a python program using functions to compute the following:
 3] List of students who play either cricket or badmenton but not both. 
 4] Number of students who play neither cricket not badmenton. 
 5] Number of students who play cricket and football but not badmenton.
-*/
+'''
 
 
-// ANSWER :
+#ANSWER :
 
 cricket=[] 
 badmenton=[] 
