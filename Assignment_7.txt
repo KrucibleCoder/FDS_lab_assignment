@@ -1,14 +1,16 @@
-Q.1] DEPARTMENT OF COMPUTER ENGINEERING HAS STUDENTS CLUB NAMED PINNACLE CLUB. STUDENTS OF 2ND,3RD AND FINAL YEAR DEPARTMENT CAN BE GRANTED MEMBERSHIP ON REQUEST. SIMILARLY ONE MAY CANCEL THE MEMBERSHIP OF CLUB. FIRST NODE IS RESERVED FOR PRESIDENT OF CLUB AND LAST NODE IS RESERVED FOR SECRETARY OF CLUB.
-     WRITE A C++ PROGRAM TO MAINTAIN CLUB MEMBER INFORMATION USING SINGLY LINKED LIST.
-     STORE STUDENT'S PRN AND NAME.
-     WRITE FUNCTIONS FOR THE FOLLOWING:-
-     1] ADD AND DELETE THE MEMBER,AS WELL AS PRESIDENT OR EVEN SECRETARY.
-     2] COMPUTE TOTAL NUMBER OF MEMBERS OF THE CLUB.
-     3] DISPLAY THE MEMBERS.
+/*
+Q.1] Department of Computer engineering has students club named Pinnacle club. Students of 2nd,3rd and final year can be granted membership on request. Similarly one may cancel the membership of club. First node is reserved for president of club and last node is reserved for secretary of club.
+     Write a c++ program to maintain club member information using singly linked list.
+     Store student's prn and name.
+     write functions for the following:-
+     1] Add and delete the member,as well as president or even secretary.
+     2] Compute total number of members of the club.
+     3] Display the members.
+*/
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-PROGRAM :
+// PROGRAM :
+
 
 #include<iostream>
 #include<cstdlib>
@@ -329,3 +331,6 @@ cout<<"\nWrong choice"<<endl;
 }
 return 0;
 }
+
+
+// END PROGRAM
