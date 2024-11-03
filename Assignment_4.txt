@@ -1,14 +1,17 @@
 #Assignment 4
 
-'''Q.1] WRITE A PYTHON PROGRAM TO STORE FIRST YEAR PERCENTAGE OF STUDENTS IN AN ARRAY.
-WRITE FUNCTION FOR SORTING ARRAY OF FLOATING POINT NUMBERS IN ASCENDING ORDER USING:
-1] BUBBLE SORT.
-2] SELECTION SORT.
-3] INSERTION SORT.
-ALSO DISPLAY THE TOP 5 PERCENTAGE '''
+'''
+Q.1] Write a python program to store first year percentage of students in an array.
+Write function for sorting array of floating point numbers in ascending order using:
+1] Bubble sort.
+2] Selection sort.
+3] Insertion sort.
+Also display the top 5 percentage
+'''
 
 
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# PROGRAM 
+
 
 percentage=[]
 n=int(input("Enter total no. of students:"))
@@ -52,4 +55,4 @@ print("Sorted list by insertion sort:",percentage)
 
 print("END OF PROGRAM ->->->->->->->->->->->->->->->->")
 
-#END OF PROGRAM
+# END PROGRAM
