@@ -1,11 +1,12 @@
-'''Q.1] SECOND YEAR COMPUTER ENGINEERING CLASS,SET A OF STUDENTS LIKE VANILLA ICE-CREAM AND SET B OF STUDENTS LIKE BUTTERSCOTCH ICE-CREAM.
-	WRITE A C++ PROGRAM TO STORE TWO SETS USING LINKED LIST. COMPUTE AND DISPLAY:
-	(A) SET OF STUDENTS WHO LIKE BOTH VANILLA AND BUTTERSCOTCH.
-	(B) SET OF STUDENTS WHO LIKE EITHER VANILLA OR BUTTERSCOTCH.
-	(C) SET OF STUDENTS WHO LIKE NEITHER VANILLA NOT BUTTERSCOTCH.'''
+/*
+Q.1] In second year computer engineering class, set A of students like vanilla ice-cream and set B of students like butterscotch ice-cream.
+	Write a C++ program to store two sets using linked list. Compute and display:
+	(A) Set of students who like both vanilla and butterscotch.
+	(B) Set of students who like either vanilla or butterscotch.
+	(c) Set of students who like neither vanilla not butterscotch.
+*/
 
-
-# ANSWER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// ANSWER
 
 
 #include<iostream>
