@@ -1,15 +1,18 @@
 #Assignment 2
 
-'''Q.1] WRITE A PYTHON PROGRAM TO STORE MARKS STORED IN SUBJECT FDS BY N NUMBER OF STUDENTS IN THE CLASS.
-WRITE FUNCTIONS TO COMPUTE THE FOLLOWING :
-1] THE AVERAGE SCORE OF THE CLASS.
-2] THE HIGHEST SCORE AND THE LOWEST SCORE OF THE CLASS.
-3] COUNT OF STUDENTS WHO WERE ABSENT FOR THE TEST.
-4] DISPLAY THE MARKS WITH HIGHEST FREQUENCY.'''
+'''
+Q.1] Write a python program to store marks stored in subject FDS by n number of students in the class.
+Write functions to compute the following :
+1] The average score of the class.
+2] The highest score and the lowest score of the class.
+3] Count of students who were absent for the test.
+4] Display the marks with highest frequency.
+'''
 
 
 
-# ANSWER :>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# PROGRAM 
+
 
 marks=[]
 n=int(input("Enter the total number of students in the class:"))
@@ -67,4 +70,4 @@ maxfrequency(marks)
 print("END OF PROGRAM ->->->->->->->->->->->->->->->->->->->->->->->->")
 
 
-#END OF PROGRAM
+# END PROGRAM
