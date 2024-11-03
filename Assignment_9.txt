@@ -1,10 +1,11 @@
-'''Q.1] A PALINDROOM IS STRING CHARACTER THAT'S THE SAME FORWARD AND BACKWARD. IMPLEMENT A C++ PROGRAM TO:
-	(A) TO PRING ORIGINAL STRING FOLLOWED BY REVERSED STRING USING STACK.
-	(B) TO CHECK WHETHER GIVEN STRING IS PALINDROME OR NOT.'''
+/*
+Q.1] A palindroom is string character that's the same forward and backward. Implement a C++ program to:
+	(A) Print original string followed by reversed string using stack.
+	(B) Check whether given string is palindrome or not.
+*/
 
 
-
-# PROGRAM>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// PROGRAM
 
 
 #include<iostream>
@@ -122,3 +123,5 @@ int main()
   obj.checkPalindrome();
   return 0;
 }
+
+// END PROGRAM
